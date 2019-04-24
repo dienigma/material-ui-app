@@ -1,8 +1,12 @@
 import React, { Component, Fragment } from "react";
 import { Header, Footer } from "./layouts/index";
 import Exercises from "./Exercises";
+import { muscles, exercises } from "../store";
 
 export default class extends Component {
+  state = {
+    exercises
+  };
   render() {
     return (
       <Fragment>
@@ -10,7 +14,7 @@ export default class extends Component {
 
         <Exercises />
 
-        <Footer />
+        <Footer muscles={muscles} />
       </Fragment>
     );
   }
