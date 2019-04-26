@@ -4,7 +4,8 @@ export const exercises = [
   {
     id: "overhead-press",
     title: "Overhead Press",
-    description: "Delts exercise...",
+    description:
+      "The press, overhead press or shoulder press is a weight training exercise with many variations, typically performed while standing, in which a weight is pressed straight upwards from racking position until the arms are locked out overhead, while the legs, lower back and abs maintain balance.",
     muscles: "shoulders"
   },
   {
