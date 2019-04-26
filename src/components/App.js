@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Header, Footer } from "./layouts/index";
 import Exercises from "./Exercises";
 import { muscles, exercises } from "../store";
+import Grid from "@material-ui/core/Grid";
 
 export default class extends Component {
   state = {
@@ -41,15 +42,16 @@ export default class extends Component {
       { category, exercise } = this.state;
     return (
       <Fragment>
-        <Header />
+        <Grid container>
+          <Header />
 
-        <Exercises
-          exercise={this.state.exercise}
-          exercises={exercises}
-          category={category}
-          onSelect={this.handleExerciseSelected}
-        />
-
+          <Exercises
+            exercise={this.state.exercise}
+            exercises={exercises}
+            category={category}
+            onSelect={this.handleExerciseSelected}
+          />
+        </Grid>
         <Footer
           category={category}
           muscles={muscles}
