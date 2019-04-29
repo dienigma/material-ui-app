@@ -6,7 +6,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Create from "../Exercises/Dialogs/Create";
 
-export default props => (
+export default ({ muscles, onExerciseCreate }) => (
   <AppBar position="static" style={{ background: "black" }}>
     <Toolbar>
       <Typography
@@ -17,7 +17,7 @@ export default props => (
       >
         Exercise DB
       </Typography>
-      <Create />
+      <Create muscles={muscles} onCreate={onExerciseCreate} />
     </Toolbar>
   </AppBar>
 );
