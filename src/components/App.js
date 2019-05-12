@@ -43,6 +43,12 @@ export default class extends Component {
     }));
   };
 
+  handleExerciseDelete = id => {
+    this.setState(({exercises})=>({
+      exercises : exercises.filter(ex => ex.id !== id)
+    }))
+  }
+
   render() {
     const exercises = this.getExercisesByMuscle(),
       { category, exercise } = this.state;
@@ -59,6 +65,7 @@ export default class extends Component {
             exercises={exercises}
             category={category}
             onSelect={this.handleExerciseSelect}
+            onDelete = {this.handleExerciseDelete}
           />
         </Grid>
         <Footer
